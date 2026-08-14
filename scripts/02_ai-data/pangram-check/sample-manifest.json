@@ -1,0 +1,802 @@
+[
+  {
+    "request_id": "human-8021",
+    "sample_id": 8021,
+    "true_label": "human",
+    "file": "human/8021.txt",
+    "word_count": 284,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-15247",
+    "sample_id": 15247,
+    "true_label": "human",
+    "file": "human/15247.txt",
+    "word_count": 160,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-19361",
+    "sample_id": 19361,
+    "true_label": "human",
+    "file": "human/19361.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-23075",
+    "sample_id": 23075,
+    "true_label": "human",
+    "file": "human/23075.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-18289",
+    "sample_id": 18289,
+    "true_label": "human",
+    "file": "human/18289.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-22111",
+    "sample_id": 22111,
+    "true_label": "human",
+    "file": "human/22111.txt",
+    "word_count": 1000,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-6728",
+    "sample_id": 6728,
+    "true_label": "human",
+    "file": "human/6728.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-24012",
+    "sample_id": 24012,
+    "true_label": "human",
+    "file": "human/24012.txt",
+    "word_count": 708,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-13635",
+    "sample_id": 13635,
+    "true_label": "human",
+    "file": "human/13635.txt",
+    "word_count": 127,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-23566",
+    "sample_id": 23566,
+    "true_label": "human",
+    "file": "human/23566.txt",
+    "word_count": 71,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-15929",
+    "sample_id": 15929,
+    "true_label": "human",
+    "file": "human/15929.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-10252",
+    "sample_id": 10252,
+    "true_label": "human",
+    "file": "human/10252.txt",
+    "word_count": 50,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-7490",
+    "sample_id": 7490,
+    "true_label": "human",
+    "file": "human/7490.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-21834",
+    "sample_id": 21834,
+    "true_label": "human",
+    "file": "human/21834.txt",
+    "word_count": 436,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-17462",
+    "sample_id": 17462,
+    "true_label": "human",
+    "file": "human/17462.txt",
+    "word_count": 50,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-9787",
+    "sample_id": 9787,
+    "true_label": "human",
+    "file": "human/9787.txt",
+    "word_count": 186,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-10212",
+    "sample_id": 10212,
+    "true_label": "human",
+    "file": "human/10212.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-23728",
+    "sample_id": 23728,
+    "true_label": "human",
+    "file": "human/23728.txt",
+    "word_count": 77,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-4447",
+    "sample_id": 4447,
+    "true_label": "human",
+    "file": "human/4447.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-16897",
+    "sample_id": 16897,
+    "true_label": "human",
+    "file": "human/16897.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-15183",
+    "sample_id": 15183,
+    "true_label": "human",
+    "file": "human/15183.txt",
+    "word_count": 1000,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-21200",
+    "sample_id": 21200,
+    "true_label": "human",
+    "file": "human/21200.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-25338",
+    "sample_id": 25338,
+    "true_label": "human",
+    "file": "human/25338.txt",
+    "word_count": 83,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-5161",
+    "sample_id": 5161,
+    "true_label": "human",
+    "file": "human/5161.txt",
+    "word_count": 78,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-16216",
+    "sample_id": 16216,
+    "true_label": "human",
+    "file": "human/16216.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-7334",
+    "sample_id": 7334,
+    "true_label": "human",
+    "file": "human/7334.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-289",
+    "sample_id": 289,
+    "true_label": "human",
+    "file": "human/289.txt",
+    "word_count": 335,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-14496",
+    "sample_id": 14496,
+    "true_label": "human",
+    "file": "human/14496.txt",
+    "word_count": 50,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-16493",
+    "sample_id": 16493,
+    "true_label": "human",
+    "file": "human/16493.txt",
+    "word_count": 183,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-14067",
+    "sample_id": 14067,
+    "true_label": "human",
+    "file": "human/14067.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-22300",
+    "sample_id": 22300,
+    "true_label": "human",
+    "file": "human/22300.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-6058",
+    "sample_id": 6058,
+    "true_label": "human",
+    "file": "human/6058.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-4940",
+    "sample_id": 4940,
+    "true_label": "human",
+    "file": "human/4940.txt",
+    "word_count": 1000,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-4539",
+    "sample_id": 4539,
+    "true_label": "human",
+    "file": "human/4539.txt",
+    "word_count": 1000,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-7360",
+    "sample_id": 7360,
+    "true_label": "human",
+    "file": "human/7360.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-884",
+    "sample_id": 884,
+    "true_label": "human",
+    "file": "human/884.txt",
+    "word_count": 402,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-13485",
+    "sample_id": 13485,
+    "true_label": "human",
+    "file": "human/13485.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-4990",
+    "sample_id": 4990,
+    "true_label": "human",
+    "file": "human/4990.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-8020",
+    "sample_id": 8020,
+    "true_label": "human",
+    "file": "human/8020.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-20879",
+    "sample_id": 20879,
+    "true_label": "human",
+    "file": "human/20879.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-613",
+    "sample_id": 613,
+    "true_label": "human",
+    "file": "human/613.txt",
+    "word_count": 247,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-22542",
+    "sample_id": 22542,
+    "true_label": "human",
+    "file": "human/22542.txt",
+    "word_count": 90,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-11944",
+    "sample_id": 11944,
+    "true_label": "human",
+    "file": "human/11944.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-21619",
+    "sample_id": 21619,
+    "true_label": "human",
+    "file": "human/21619.txt",
+    "word_count": 1000,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-15213",
+    "sample_id": 15213,
+    "true_label": "human",
+    "file": "human/15213.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-21414",
+    "sample_id": 21414,
+    "true_label": "human",
+    "file": "human/21414.txt",
+    "word_count": 100,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-6817",
+    "sample_id": 6817,
+    "true_label": "human",
+    "file": "human/6817.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-15894",
+    "sample_id": 15894,
+    "true_label": "human",
+    "file": "human/15894.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-10879",
+    "sample_id": 10879,
+    "true_label": "human",
+    "file": "human/10879.txt",
+    "word_count": 500,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "human-6789",
+    "sample_id": 6789,
+    "true_label": "human",
+    "file": "human/6789.txt",
+    "word_count": 250,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-49278",
+    "sample_id": 49278,
+    "true_label": "ai",
+    "file": "ai/33517.txt",
+    "word_count": 256,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-45866",
+    "sample_id": 45866,
+    "true_label": "ai",
+    "file": "ai/30105.txt",
+    "word_count": 501,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-37062",
+    "sample_id": 37062,
+    "true_label": "ai",
+    "file": "ai/21293.txt",
+    "word_count": 297,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-32533",
+    "sample_id": 32533,
+    "true_label": "ai",
+    "file": "ai/7178.txt",
+    "word_count": 286,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-48360",
+    "sample_id": 48360,
+    "true_label": "ai",
+    "file": "ai/32599.txt",
+    "word_count": 47,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-43357",
+    "sample_id": 43357,
+    "true_label": "ai",
+    "file": "ai/27596.txt",
+    "word_count": 254,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-45923",
+    "sample_id": 45923,
+    "true_label": "ai",
+    "file": "ai/30162.txt",
+    "word_count": 107,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-30908",
+    "sample_id": 30908,
+    "true_label": "ai",
+    "file": "ai/5553.txt",
+    "word_count": 51,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-41228",
+    "sample_id": 41228,
+    "true_label": "ai",
+    "file": "ai/25467.txt",
+    "word_count": 455,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-35634",
+    "sample_id": 35634,
+    "true_label": "ai",
+    "file": "ai/19234.txt",
+    "word_count": 294,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-49880",
+    "sample_id": 49880,
+    "true_label": "ai",
+    "file": "ai/34119.txt",
+    "word_count": 243,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-30613",
+    "sample_id": 30613,
+    "true_label": "ai",
+    "file": "ai/5258.txt",
+    "word_count": 465,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-47762",
+    "sample_id": 47762,
+    "true_label": "ai",
+    "file": "ai/32001.txt",
+    "word_count": 239,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-49425",
+    "sample_id": 49425,
+    "true_label": "ai",
+    "file": "ai/33664.txt",
+    "word_count": 102,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-50051",
+    "sample_id": 50051,
+    "true_label": "ai",
+    "file": "ai/34290.txt",
+    "word_count": 1165,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-40897",
+    "sample_id": 40897,
+    "true_label": "ai",
+    "file": "ai/25136.txt",
+    "word_count": 54,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-30553",
+    "sample_id": 30553,
+    "true_label": "ai",
+    "file": "ai/5198.txt",
+    "word_count": 51,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-37747",
+    "sample_id": 37747,
+    "true_label": "ai",
+    "file": "ai/21986.txt",
+    "word_count": 52,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-44585",
+    "sample_id": 44585,
+    "true_label": "ai",
+    "file": "ai/28824.txt",
+    "word_count": 58,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-28320",
+    "sample_id": 28320,
+    "true_label": "ai",
+    "file": "ai/2965.txt",
+    "word_count": 1110,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-34933",
+    "sample_id": 34933,
+    "true_label": "ai",
+    "file": "ai/17534.txt",
+    "word_count": 53,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-40507",
+    "sample_id": 40507,
+    "true_label": "ai",
+    "file": "ai/24746.txt",
+    "word_count": 551,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-36533",
+    "sample_id": 36533,
+    "true_label": "ai",
+    "file": "ai/20764.txt",
+    "word_count": 569,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-36396",
+    "sample_id": 36396,
+    "true_label": "ai",
+    "file": "ai/20571.txt",
+    "word_count": 279,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-32225",
+    "sample_id": 32225,
+    "true_label": "ai",
+    "file": "ai/6870.txt",
+    "word_count": 53,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-33105",
+    "sample_id": 33105,
+    "true_label": "ai",
+    "file": "ai/7750.txt",
+    "word_count": 495,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-49850",
+    "sample_id": 49850,
+    "true_label": "ai",
+    "file": "ai/34089.txt",
+    "word_count": 446,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-29856",
+    "sample_id": 29856,
+    "true_label": "ai",
+    "file": "ai/4501.txt",
+    "word_count": 1043,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-28621",
+    "sample_id": 28621,
+    "true_label": "ai",
+    "file": "ai/3266.txt",
+    "word_count": 576,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-32105",
+    "sample_id": 32105,
+    "true_label": "ai",
+    "file": "ai/6750.txt",
+    "word_count": 105,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-47549",
+    "sample_id": 47549,
+    "true_label": "ai",
+    "file": "ai/31788.txt",
+    "word_count": 1171,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-41915",
+    "sample_id": 41915,
+    "true_label": "ai",
+    "file": "ai/26154.txt",
+    "word_count": 557,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-40867",
+    "sample_id": 40867,
+    "true_label": "ai",
+    "file": "ai/25106.txt",
+    "word_count": 1041,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-35926",
+    "sample_id": 35926,
+    "true_label": "ai",
+    "file": "ai/19735.txt",
+    "word_count": 594,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-37588",
+    "sample_id": 37588,
+    "true_label": "ai",
+    "file": "ai/21819.txt",
+    "word_count": 581,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-32915",
+    "sample_id": 32915,
+    "true_label": "ai",
+    "file": "ai/7560.txt",
+    "word_count": 1199,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-37738",
+    "sample_id": 37738,
+    "true_label": "ai",
+    "file": "ai/21977.txt",
+    "word_count": 280,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-39840",
+    "sample_id": 39840,
+    "true_label": "ai",
+    "file": "ai/24079.txt",
+    "word_count": 294,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-26575",
+    "sample_id": 26575,
+    "true_label": "ai",
+    "file": "ai/1220.txt",
+    "word_count": 864,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-28413",
+    "sample_id": 28413,
+    "true_label": "ai",
+    "file": "ai/3058.txt",
+    "word_count": 911,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-35084",
+    "sample_id": 35084,
+    "true_label": "ai",
+    "file": "ai/18131.txt",
+    "word_count": 1188,
+    "pangram_3_billable_units": 2
+  },
+  {
+    "request_id": "ai-43866",
+    "sample_id": 43866,
+    "true_label": "ai",
+    "file": "ai/28105.txt",
+    "word_count": 54,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-44018",
+    "sample_id": 44018,
+    "true_label": "ai",
+    "file": "ai/28257.txt",
+    "word_count": 564,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-35818",
+    "sample_id": 35818,
+    "true_label": "ai",
+    "file": "ai/19543.txt",
+    "word_count": 112,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-39298",
+    "sample_id": 39298,
+    "true_label": "ai",
+    "file": "ai/23537.txt",
+    "word_count": 54,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-28752",
+    "sample_id": 28752,
+    "true_label": "ai",
+    "file": "ai/3397.txt",
+    "word_count": 116,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-47468",
+    "sample_id": 47468,
+    "true_label": "ai",
+    "file": "ai/31707.txt",
+    "word_count": 52,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-42917",
+    "sample_id": 42917,
+    "true_label": "ai",
+    "file": "ai/27156.txt",
+    "word_count": 109,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-40834",
+    "sample_id": 40834,
+    "true_label": "ai",
+    "file": "ai/25073.txt",
+    "word_count": 910,
+    "pangram_3_billable_units": 1
+  },
+  {
+    "request_id": "ai-38067",
+    "sample_id": 38067,
+    "true_label": "ai",
+    "file": "ai/22306.txt",
+    "word_count": 243,
+    "pangram_3_billable_units": 1
+  }
+]

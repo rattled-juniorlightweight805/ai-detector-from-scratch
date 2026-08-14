@@ -1,0 +1,10 @@
+{
+  "bulk_id": "blk_fc32cc252c3f4af588ab492a2f11b247",
+  "model": "default",
+  "manifest_sha256": "ddffc5abce68fa80c7df7b4da6d2f53143b8de75cfc3478fb6753f59460adef2",
+  "total_items": 300,
+  "submitted_count_per_class": 150,
+  "reported_count_per_class": 50,
+  "reported_manifest_sha256": "8a2112b6fa7982171576ac3209322a2f49911e92e8c2d8f4a333c79998949925",
+  "note": "The scope changed to 50 per class after this 300-item job was submitted."
+}

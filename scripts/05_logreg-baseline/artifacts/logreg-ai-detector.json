@@ -1,0 +1,25 @@
+{
+  "dataset": "rasbt/human-vs-ai-50k",
+  "label_mapping": {
+    "human": 0,
+    "ai": 1
+  },
+  "decision_threshold": 0.5,
+  "calibration": "Platt scaling (sigmoid)",
+  "best_parameters": {
+    "logreg__C": 3.0,
+    "tfidf__min_df": 2,
+    "tfidf__ngram_range": [
+      1,
+      2
+    ]
+  },
+  "cross_validation_accuracy": 0.9816810254051096,
+  "python_version": "3.12.3",
+  "package_versions": {
+    "datasets": "5.0.1",
+    "joblib": "1.5.3",
+    "numpy": "2.5.1",
+    "scikit-learn": "1.9.0"
+  }
+}

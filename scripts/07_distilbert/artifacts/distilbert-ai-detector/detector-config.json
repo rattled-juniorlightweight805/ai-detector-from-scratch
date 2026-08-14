@@ -1,0 +1,23 @@
+{
+  "dataset": "rasbt/human-vs-ai-50k",
+  "base_model": "distilbert/distilbert-base-uncased",
+  "label_mapping": {
+    "human": 0,
+    "ai": 1
+  },
+  "max_length": 512,
+  "decision_threshold": 0.5,
+  "calibration": "temperature scaling",
+  "temperature": 1.2900265218781632,
+  "best_validation_accuracy": 0.9974434611602753,
+  "best_checkpoint": "checkpoints/checkpoint-7605",
+  "random_state": 17,
+  "python_version": "3.12.3",
+  "package_versions": {
+    "datasets": "4.1.0",
+    "numpy": "2.5.1",
+    "scikit-learn": "1.7.1",
+    "torch": "2.13.0",
+    "transformers": "5.14.1"
+  }
+}

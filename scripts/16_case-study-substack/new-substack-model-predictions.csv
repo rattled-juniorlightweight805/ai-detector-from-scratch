@@ -1,0 +1,202 @@
+Text,URL,Human percent,AI percent,Reference label,logreg AI percent,logreg prediction,distilbert AI percent,distilbert prediction,distilbert-lora AI percent,distilbert-lora prediction,distilbert-mica AI percent,distilbert-mica prediction,modernbert AI percent,modernbert prediction,gpt2-variable AI percent,gpt2-variable prediction,gpt2-fixed AI percent,gpt2-fixed prediction,qwen3-variable AI percent,qwen3-variable prediction,qwen3-fixed AI percent,qwen3-fixed prediction
+"Whoa, Meta released a new open-weight LLM yesterday, something that hasn't happened since the good old Llama days.
+
+Their Meta Muse Glimmer model is a 30B multimodal reasoning model with a Gemma-like architecture design. (“Glimmer” is probably a wordplay on “Spark,” the more likely capable model from which Glimmer was distilled. Muse Spark is only available through Meta’s Model API, though.)
+Architecture-wise, here are some of the main points:
+1. ""Only"" a 131k context window, compared to Qwen3.6 and Gemma 4, which support 2x that natively; it's reasonable, but maybe on the shorter end in the age of agent harnesses
+2. It's a dense model, not a mixture-of-experts. (So, it's fairer to compare it to Qwen3.6 27B than Qwen3.6 30B-A3B.)
+3. Hybrid attention with grouped-query attention (GQA) and sliding window attention (SWA); the SWA:GQA pattern is a 3:1 local:global ratio. Other models like Gemma 4, which uses similar components, have a 5:1 ratio for comparison.
+4. It adopts gated attention for both GQA and SWA; gated attention has become quite common in recent months. It basically applies a sigmoid gate to the attention output to decide how much of the attention information enters the residual connection. The interesting point is that it uses relatively standard GQA and SWA rather than hybrid attention mechanisms such as Nemotron or Qwen3.6.
+5. A very extreme GQA ratio: 32 query heads and only 2 KV heads; for comparison, Gemma 4 31B uses 32 Q / 16 KV in the local heads and 32 Q / 4 KV in the global heads. This means that Meta Glimmer has a very small KV cache.
+Overall, the probably most similar architecture is Gemma 3 27B (including the Gemma-style pre/post RMSNorm placement) and Gemma 4 31B, but with some tweaks like SwiGLU instead of GeGLU activations, gated attention, and the more extreme GQA:SWA pattern mentioned before.
+What stands out is its extreme KV-cache efficiency.
+I.e., the KV CACHE / TOKEN ratios (in BF16) are:
+- Muse Glimmer: 52 KiB (lower is better)
+- Qwen3.6 27B: 64 KiB
+- Gemma 4 31B: 840 KiB
+Modeling-performance-wise, their own benchmarks show that it's mostly ahead of Qwen3.6. According to the independent composite benchmarks on the Artificial Analysis Intelligence Index, it's slightly behind Qwen3.6 (see figure below). So, a few days of using it will tell where it really ranks.
+Overall, it looks like a solid model, particularly for agentic workflows. What stands out most is its very low memory footprint and also pretty fast prefill and decode speed. It’s also just great to see Meta releasing open weights again :).",https://substack.com/@rasbt/note/c-312570436?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.7195,Human,0.0771,Human,0.0126,Human,0.0064,Human,1.0315,Human,93.3594,AI,89.4531,AI,0.1137,Human,0.0301,Human
+"Just saw that the LLMs-from-scratch repository passed 100,000 stars on GitHub (github.com/rasbt/LLMs-f…)!
+
+This is super cool and motivating. I am really happy to see that this open-source repo has helped so many people.
+Thanks also to everyone who shared ideas and opened PRs with improvements!
+Of course, I plan to keep adding new material, including new attention variants and architectures (while bigger projects like RL and Reasoning From Scratch live in their separate repositories).
+I am also currently working on a larger applied custom “small” LLM project. It has been keeping me super busy this month, but I will share more on that soon in an upcoming Substack mega-article! It’s my longest one yet!
+If you are new to it, some of the highlights in the repo include
+1. Of course, the complete code path from tokenization and attention to pretraining, classification, and instruction fine-tuning, etc. All of it FROM SCRATCH, of course! (RL lives in a companion repo.)
+2. From-scratch implementations of Llama, Qwen, Gemma, and Olmo (smaller variants that run locally and can be plugged into the training scripts).
+3. From-scratch implementations of attention alternatives and other architecture components, such as GQA, MLA, sliding-window attention, Gated DeltaNet, DeepSeek Sparse Attention, cross-layer KV sharing, and mixture-of-experts
+4. Materials on KV caching, training performance, memory-efficient weight loading, DPO, evaluation, and LoRA
+So, if you don’t have any weekend plans yet, happy tinkering!",https://substack.com/@rasbt/note/c-310007138?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0417,Human,0.0415,Human,0.0041,Human,0.0,Human,0.1648,Human,1.5198,Human,1.9165,Human,0.0618,Human,0.0261,Human
+"I'm about a year out from some of the worst burnout I've built up in my time building Olmo. I feel like just in the last few weeks I've turned a corner to being more chill again (huge yay). It's wild to me just how long recovering from burnout can take (the article below was a product of said burnout, last year).
+
+For many people when they ask me how to break into AI I tell them the actions are simple, but it takes longer than you think. Same goes for burnout.
+Though I think burnout is harder, as breaking into AI is a much more ""forward looking"" thing. Burnout is really pernicious to nail down and address. I think it often takes a moderate change in your career and habits. It's hard to take a slight step back as a successful person and fix your burnout. It'll really take a while.
+In my case the final straw maybe my book being done and some more clarity on what I'm doing next. On top of it surely taking months longer because of how sad the changes at Ai2 were for me personally.
+I really wish all of my friends in AI who are feeling this even stronger than I was can catch a break. I've by a mix of my nature and my habits as an athlete been pretty in tune with stopping myself before overworking. Imo as AI researchers we should take care of our brains like professional athletes take care of their brain.
+Touching grass is worth it, and I'm very glad to find myself being slightly bored again. It's nudged me to reading more, of all things!
+Take care of yourself.
+Ps I feel like there's a recurring behavior of people somewhat like myself where they write about burnout or try to help people when they're actually burnt out themselves. Surely this is part of why I felt like I could write about it so well.",https://substack.com/@natolambert/note/c-311573732?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0019,Human,0.2837,Human,0.0098,Human,0.0,Human,0.0854,Human,0.6805,Human,1.1169,Human,0.0399,Human,0.0169,Human
+"Impressive new paper from Meta.
+
+(bookmark it)
+Scaling laws assume model size and training data act on loss independently.
+This work introduces Skaling law, which couples capacity and data through a single interaction exponent. The extra term cuts mean absolute percentage error by 1.5x to 3x across both interpolation and extrapolation.
+The largest corrections land in the data-scarce and heavy-overtraining regimes where the standard Chinchilla and Kaplan forms drift.
+Paired with a sparse grid restricted to low-compute runs, it extrapolates the full grid using roughly 10x less compute than a uniform sweep.
+Why does it matter?
+Deployment now happens well past compute optimal. A law that stays accurate there, and that can be fit from small runs, changes how a pretraining budget gets planned.
+Paper: arxiv.org/abs/2608.07222
+Track more trending AI papers in our academy: academy.dair.ai",https://substack.com/@elvissaravia/note/c-311947297?r=gb4sb&utm_source=notes-share-action&utm_medium=web,88,12,Human,97.7913,AI,0.117,Human,0.0144,Human,0.0026,Human,1.6968,Human,54.6875,AI,95.3125,AI,0.2319,Human,0.8728,Human
+"Today, a (shrinking) number of engineers still read code generated by AI agents (or summaries of the code change). As agents get better (reliability, task performance) there will be even more economic pressure/incentive to shift that effort to “other“ business areas.
+
+It will be critical for teams to begin to plan around that variant of the future looks like, issues that arise and how to address them.
+Some key questions on my mind as I think of this :
+How is responsibility modeled? Can we truly delegate an agent as a DRI?
+Will we arrive at a future where it turns out humans must still be DRIs, but only a handful of individuals have built the fortitude, and skill required to review and evaluate agent output (aka skills required to be an effective system DRIs).
+Will today’s approach in throwing compute/tokens at automated verification (see adversarial code review CI by folks at Anthropic and /review in Claude Code and GitHub Co Pilot) as well as agents for RCA pan out and get us to cost-efficient software reliability?
+Anyone writing more about this?",https://substack.com/@victordibia/note/c-312526817?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0024,Human,0.068,Human,0.0131,Human,0.0001,Human,0.0954,Human,1.2634,Human,1.6602,Human,0.0526,Human,0.0278,Human
+"Honest confession:
+
+I'm one of those people who constantly rants about the value of learning to code and how hard it was to become a programmer, especially before AI, but also before StackOverflow.
+I still believe in the value of doing the grunt work, writing the code by hand to learn, and developing skills through doing (as opposed to observing an AI do it). Coding was never the easy part.
+But having reflected on the topic, I've come to understand that the new generation might have it harder than we did back in the day.
+Back in our day, software projects moved at the pace of human coding. The only way to build software was to manually write code. This gave you immense opportunity to learn by doing.
+Right now, developers don't have that luxury. Everything is moving at the speed of AI. Companies/employers won't wait for you to write a module by hand. They expect you to use AI to write the code and also have the skills to review the code or make sure the AI agent writes it properly.
+As a result, they're missing out on all the learning opportunities we had in the era of manual coding.
+Today, the only way you can write code by hand is if you're working for yourself and working on a hobby project (not everyone has time for that). For everything else, there is AI.
+So how do we move forward? I deeply believe that kids (grade school, high school, college) should learn to code by hand before (or as) they use AI coding tools. Just like you learn to do arithmetic by hand in school.
+Before they enter the job market and are exposed to the economic pressures that force them to use AI, kids should learn to write code by hand. That is the only way they can acquire the skills that will make them better agentic engineers.",https://substack.com/@bdtechtalks/note/c-312508065?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0003,Human,0.0653,Human,0.0149,Human,0.0003,Human,0.0553,Human,56.25,AI,7.8125,Human,0.0444,Human,0.0278,Human
+"It's really not like this though. Most of the code I write at the day job is still handwritten (well, with the usual helpers we had long before LLMs). Twitter isn't real life, and the derangements of big tech companies isn't reflected in the other 90% of the industry.
+
+Meanwhile, as I keep saying, where's the product of all of this? A year of full blown hype frenzy and LLMmaxxing in big tech and the usual linkedin productivity poasting, and nothing has changed about their products except they've become glitchier. No radical overhauls. No amazing new products. Just a lot of bragging in the usual clueless fashion about lines of code and PRs.
+Besides which you should always be working on your own projects if you want to grow as a programmer. In your day job you do what you're already competent to do. It's a treadmill. Side projects are where you experiment and learn.
+Once upon a time some of the wealthier firms would pay you to work on side projects during part of your work hours for exactly this reason. Now they pay you to train your replacement. So when it's time to get a new job, you'd better have been learning something useful. Nobody needs a guy who can do everything an LLM can, but slower.",https://substack.com/@fukitol/note/c-312572529?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0,Human,0.1412,Human,0.0096,Human,0.0002,Human,0.0418,Human,1.4709,Human,1.2268,Human,0.0519,Human,0.0203,Human
+"I believe OpenAI, Anthropic, and other LLM providers want enterprise and government customers.
+
+That’s where the money is.
+They initially started, what I consider, a very successful marketing campaign: “Our models are so good they scare us.”
+It worked in 2019, 2022, and 2024.
+As time went by, Altman simply saying that he was scared of another model was no longer enough.
+And that’s when they got carried away.
+A millennial AI tech bro at a US startup is the opposite of a boomer CEO at a traditional company, or an even older head of government.
+What a tech bro finds cool, the CEO will see as an unnecessary risk. After all, when he was young, they used abacuses and typewriters, and everything worked.
+It’s even worse for middle managers and lower-level decision-makers in the corporate world. The guy just wants to retire peacefully. After reading about a model escaping and hacking a company, he doesn’t see any point in making the decision to bring something like this into his department.
+It’s even worse for his employees. What if they prompt something wrong and the model deletes everything and escapes?
+That’s what many AI specialists have to deal with now.
+I’ve always had a very straightforward approach to it: try it yourself, and then tell me if you think this model has the cognitive capabilities to hack your competitors, steal all your data, and run away, or whatever else you imagine it might do.
+Usually, after a day with Microsoft Copilot, the fear disappears entirely.
+Yet, thanks to this fearmongering, we are blessed with a completely insane EU AI Act, and many EU companies have barely introduced any AI because they don’t know how to deal with these risks.
+And indeed, imaginary risks are the hardest to deal with.
+Read the latest AI Realist article why seemingly nobody except for top management wants to adopt AI.",https://substack.com/@msukhareva/note/c-311884227?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0009,Human,0.893,Human,0.1847,Human,0.0228,Human,0.7935,Human,79.2969,AI,88.6719,AI,0.0881,Human,0.0315,Human
+"Netflix’s encoding trick starts with one uncomfortable idea: resolution can lie.
+
+Every Netflix stream is really a set of pre-encoded video files.
+240p, 360p, 480p, 720p, 1080p.
+Each one sits at a different bitrate, and your device jumps between them as your network gets better or worse.
+If your Wi-Fi drops, Netflix moves you down the ladder so the video keeps playing instead of buffering.
+For years, the simple way to build that ladder was to use the same bitrate-resolution pairs across the catalog.
+That sounds reasonable until you compare two scenes.
+A cartoon might have flat colors, clean edges, and very little motion. It can look sharp at 1080p without needing many bits.
+An action scene might have camera noise, water, fire, fast cuts, and motion everywhere. If you force that into 1080p at too low a bitrate, the encoder has to spread bits across too many pixels. That is when you get blocking, ringing, and ugly compression artifacts.
+So the ""expected"" ladder breaks in both directions.
+For simple content, Netflix was spending bits that the viewer could not see.
+For complex content, Netflix sometimes needed a lower resolution or a higher bitrate to avoid visible artifacts.
+The fix they came up with was per-title encoding.
+Instead of giving every title the same ladder, Netflix analyzes each title and builds a custom one.
+They run trial encodes across a finite set of resolutions and quantization points.
+For each version, they measure the bitrate and the resulting quality. Then they plot the tradeoff.
+The important line is the convex hull.
+That is the set of encodes where you cannot get better quality at the same bitrate from another resolution.
+If 720p at 1 Mbps looks better than 1080p at 1 Mbps, pick 720p.
+If a cartoon can reach crisp 1080p at a low bitrate, let it jump to 1080p earlier.
+If an action movie needs more bits to avoid artifacts, give it a different top rung.
+Their examples are wild.
+For BoJack Horseman, Netflix reported 1080p at 1540 kbps with the per-title recipe. The old fixed ladder used 480p at 1750 kbps.
+For Orange is the New Black, their highest-quality 1080p encode used 4640 kbps instead of 5800 kbps, which saved about 20% bitrate in that example.
+Same product.
+Same player.
+Same goal.
+Different workload shape.
+That is the system design lesson:
+Default configs are guesses.
+Measure the curve before you pick the recipe!!",https://substack.com/@alexzajac/note/c-312622744?r=gb4sb&utm_source=notes-share-action&utm_medium=web,0,100,AI,80.0059,AI,54.6222,AI,79.3758,AI,99.7684,AI,100.0,AI,99.6094,AI,98.4375,AI,99.6094,AI,99.6094,AI
+"My reporting from the Black Hat cybersecurity conference on the OpenAI-Hugging Face briefing got more than 2 million views on X and people were, understandably, pretty freaked out.
+
+But I was still at Black Hat, so I spent yesterday listening to what security people there actually thought about the talk.
+Besides talking to folks I cornered in the hallways and in the business hall, at the final keynote one panelist pointed out the agents didn't actually have to escape their sandbox. They were using capabilities and access OpenAI had given them. “Thinking that turning off the internet was enough feels naive,” she said.
+Another wondered whether AI companies are starting to treat incidents involving their agents behaving badly as a form of good publicity, calling it “felony humble-bragging.”
+And another said the whole message-board thing actually reminded him of early human hackers using message boards to swap information and help each other hack things. “It’s classic hacker activity.”
+Anyway, I wrote about what happened after my original post went viral, how I wound up reporting it in the first place, and what people at Black Hat actually made of the whole thing",https://substack.com/@sharongoldman/note/c-310331981?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0012,Human,0.0694,Human,0.0142,Human,0.0087,Human,0.087,Human,2.1606,Human,3.4668,Human,0.0938,Human,0.087,Human
+"If you ask 9 LLMs to act as ‘independent judges’, you may only be get 2 judges’ worth of information…
+
+People often assume that more models are better, because of the long standing ‘wisdom of crowds’ effect: the average of estimates by human experts can outperform any one individual.
+But this statistical theory doesn’t necessary apply to LLMs. Models have similar architectures and are trained on similar data. Their estimates - and errors - can be highly correlated.
+A recent pre-print highlighted this nicely. On a range of tasks, 9 LLMs from 7 model families didn’t produce 9 independent viewpoints. They produced around 2.
+It’s a bit like having a jury of 9 people but 8 of them are just the same bloke moving from seat-to-seat putting different sunglasses on each time.
+What’s more, the study found judgements from a group of models can be worse than the best model in the group. We’ve been finding similar patterns in many of our internal evaluations.
+It’s a good reminder that understanding how and why LLMs make errors is much more powerful than just throwing more models at the problem.
+Link to pre-print: arxiv.org/abs/2605.29800",https://substack.com/@adamkucharski/note/c-311733475?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0175,Human,0.0944,Human,0.0126,Human,0.0002,Human,0.2518,Human,56.6406,AI,89.8438,AI,0.1114,Human,0.0374,Human
+"𝗧𝘂𝗿𝗻𝗶𝗻𝗴 𝗮 𝗣𝗗𝗙 𝗶𝗻𝘁𝗼 𝗽𝗹𝗮𝗶𝗻 𝘁𝗲𝘅𝘁 𝗶𝘀 𝗻𝗼𝘁 𝗲𝗻𝗼𝘂𝗴𝗵 𝗳𝗼𝗿 𝗮 𝗴𝗼𝗼𝗱 𝗥𝗔𝗚 𝗽𝗶𝗽𝗲𝗹𝗶𝗻𝗲. Tables, headings, figures, page structure, and scanned text all carry information that can be lost before retrieval even begins.
+
+Chunkr is an open-source document intelligence service designed for this ingestion layer. It combines layout analysis, OCR, and document-aware chunking to convert PDFs, PowerPoint files, Word documents, and images into structured content for RAG and LLM applications.
+Instead of flattening a page into one text stream, Chunkr detects elements such as titles, section headers, paragraphs, lists, tables, pictures, captions, formulas, headers, and footers. Each segment can retain its page location and bounding box, while the output can be formatted as HTML or Markdown and grouped into retrieval-sized chunks.
+The open-source release supports PDF, PPT/PPTX, DOC/DOCX, and image inputs. Excel is currently supported in the managed Cloud API, not the open-source version.
+𝗜𝘁 𝗶𝘀 𝗮𝗹𝘀𝗼 𝘀𝗲𝗹𝗳-𝗵𝗼𝘀𝘁𝗮𝗯𝗹𝗲. The repository provides Docker Compose configurations for GPU, CPU-only, and Apple Silicon deployments. Its models.yaml configuration can define multiple LLM providers, choose default and fallback models, apply per-model distributed rate limits, and reference models by ID from API requests.
+The open-source edition uses community/open-source models for layout analysis, OCR, and VLM processing, while Chunkr’s managed Cloud API uses a separate proprietary stack. The project core is dual-licensed under AGPL-3.0 and a commercial license.
+For RAG systems that ingest complex documents, this is the part of the pipeline worth treating as document understanding rather than simple text extraction.
+Repository link in the comments.",https://substack.com/@youssefhosni95/note/c-309965198?r=gb4sb&utm_source=notes-share-action&utm_medium=web,0,100,AI,99.9131,AI,98.651,AI,64.1783,AI,98.9293,AI,98.4375,AI,100.0,AI,99.6094,AI,100.0,AI,100.0,AI
+"Over the 6 semesters that I taught my writing course ""To What Problem is ChatGPT the Solution?"" (about AI, not using it to write), I saw a clear evolution from openness to AI as a ""tool"" to serious concerns about cognitive offloading, privacy, and deskilling among my students. This was especially clear this past semester. One thing I learned from teaching this class as gen AI has changed is that students really want to talk openly and honestly about AI. Even while dealing with all the challenges, this was the best teaching experience of my career. There are some really hard problems to solve here for education and for sure students are using AI and missing the learning and the thinking. But talking to actual students about what they are doing/seeing/thinking made these problems seem like ones we can solve, and I think we can. (Also: turns out I may have some spare time this fall! Would love to come to your school and talk more about this. More on that soon.) This whole piece from Inside Higher Ed is worth a read. insidehighered.com/opin…",https://substack.com/@janerosenzweigwrites/note/c-309958432?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0005,Human,0.0427,Human,0.0092,Human,0.0,Human,0.0496,Human,1.1841,Human,1.5442,Human,0.0423,Human,0.0282,Human
+"Yesterday I wrote about YouTube’s announcement that it was doubling its viewership requirements for allowing creators into its Partnership program. The theory I put forward is that the platform wanted to incentivize higher-quality content and engagement.
+
+There’s already been some creator backlash to the announcement, with a lot of going toward the new requirement that a creator’s Shorts generate at least 20 million views in the past 90 days in order to receive a revenue share. Many pointed out that a creator would need to generate over 220,000 Shorts views a day to meet this requirement — an incredibly high bar.
+My read on YouTube’s decision to require ridiculously high Shorts viewership for monetization is that it wants most creators to treat Shorts primarily as a marketing channel for their long-form videos
+.
+YouTube wants more viewing to happen on TVs, where audiences are consuming the kind of programming blue-chip advertisers want to buy against. Shorts views, by comparison, are cheap and ephemeral, and it’s relatively easy to game the algorithm. YouTube needs Shorts so it can compete with Instagram and TikTok, but its North Star is still longform video.",https://substack.com/@simonowens/note/c-312511567?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.3799,Human,0.228,Human,0.0334,Human,0.195,Human,11.0352,Human,99.6094,AI,98.4375,AI,0.3082,Human,0.148,Human
+"Anthropic’s expert training has clearly been worth it.
+
+In the past, when I used to try to use Claude for simple CAD projects, it never worked. Now, I can get reasonably complex geometries through OpenSCAD and even modestly difficult schematics/PCBs done in KiCAD.
+What’s fun, though, is I can get Claude to write a harness for Qwen 3.6 27B (my local model), which natively fails both tasks. With the harness and “use this tool, avoid this habit, check this,"" I can get Qwen to actually succeed in the tasks I’ve tried on Opus 5/Fable.
+This process isn’t distillation, but it’s conceptually a similar concept that costs context-window tokens but is less brittle (smaller learner models tend to fail catastrophically when you push them where they didn’t get the teacher’s traces).",https://substack.com/@weightythoughts/note/c-303021717?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,1.0857,Human,3.8561,Human,0.0763,Human,0.069,Human,0.2625,Human,99.6094,AI,72.6562,AI,0.3128,Human,0.0404,Human
+"📢AI agents can autonomously conduct AI research when the result is easily verifiable, but what about open-ended AI research? That’s much harder to study, and our new preprint is our first crack at doing so. Our main finding is negative, and we identify five recurring failure modes. arxiv.org/abs/2607.27191
+
+Our results are tentative, and we are working to address the limitations (sample size, potential scaffold improvements). But if the finding holds up, what are the implications? It depends on whether you think recursive self improvement can be achieved simply by hill climbing at scale (I personally don’t think so) and whether you think current limitations of open-ended research like judgment and creativity could change quickly (I’m personally very open to this possibility). We plan to continue this style of evaluation — which we call shadow evaluation — on a regular basis. 
+We’ve wanted to do this for two years, but it took so long because we wanted to get the method right. The idea behind shadow evaluation was suggested by some of the UK AISI coauthors of the paper and refined by the Princeton team. This method has important advantages (and limitations) over the current ways of evaluating agents’ ability to conduct AI research. If you’re an AI researcher interested in working with us on a shadow evaluation based on one of your papers, we’d love to hear from you. forms.gle/XdDC9FY6121Ex…
+This type of evaluation necessarily involves a ton of researcher flexibility in design, execution, and interpretation. Members of the core team have a particular position in the debate on recursive self-improvement / superintelligence, and this could influence how we conduct the research. We have a detailed section in the paper on our potential biases and how we address them. We sought out a team of collaborators who don’t all share our priors, and we explicitly surface the interpretive disagreements that resulted. For future evaluations, we are interested in having “adversarial collaborators” as part of the core team. 
+This paper exists because of the careful, time-consuming and very much human work that Peter Kirgis, Sayash Kapoor, Andrew Schwartz, and Stephan Rabanser did over the last few months. I’m also very grateful to the larger group of collaborators and co-authors. The work is part of the larger CRUX project that pushes frontier AI agents beyond what benchmarks can measure (cruxevals.com). We are looking for a senior researcher to join the team:",https://substack.com/@aisnakeoil/note/c-304899739?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,0.0001,Human,0.1233,Human,0.0371,Human,0.005,Human,0.0744,Human,1.0803,Human,1.7822,Human,0.0345,Human,0.0174,Human
+"Coding agents now write code faster than I can read it.
+
+So I spend less time typing and more time explaining what I want, preparing context, and checking the result.
+This is what I covered in Workshop 1 of AI Dev Tools Zoomcamp 2026:
+- Spec-driven development: write down what you want before asking an agent to implement it
+- Context engineering: give the agent the commands, rules, and documents it needs
+- Loop engineering: run agents on small tasks, with checks between runs
+- Graph engineering: split the work between product manager, engineer, and tester agents
+You can watch the recording here: youtube.com/live/VUJxJG…
+I also wrote detailed notes with the examples and prompts from the workshop:",https://substack.com/@alexeygrigorev/note/c-299535356?r=gb4sb&utm_source=notes-share-action&utm_medium=web,100,0,Human,3.9654,Human,0.1066,Human,0.0237,Human,0.001,Human,0.0854,Human,1.1658,Human,1.4282,Human,0.0954,Human,0.1785,Human
+"Andrej Karpathy just dropped 12-page PDF on ""Graph Engineering"" for multi-agentic systems
+
+the shift: Karpathy's loop runs 700 experiments and forgets all of them. A graph remembers forever
+here's the full system:
+step 1 → build one loop: generate, critique, revise. 630 lines, 700 experiments in 48 hours
+step 2 → go parallel: agents in separate worktrees, same repo, different branches, no conflicts
+step 3 → add a knowledge graph: extract entities, resolve aliases, assemble typed edges, query through subgraphs
+step 4 → ground your evaluator: it checks claims against graph edges, not vibes
+step 5 → plug the graph as shared memory. workers write to it. evaluators fact-check against it. Loops persist overnight
+step 6 → the agent forgets. the graph does not. stop rebuilding context from scratch every session
+Karpathy ran 1 agent in 1 direction. Anthropic's graph runs 1,000 with shared memory - same model, it's the architecture
+this 11-page PDF changed how I'm building multi-agent systems today
+read it now - then explore the full graph engineering article below ↓",https://substack.com/@0xcodila/note/c-312150558?r=gb4sb&utm_source=notes-share-action&utm_medium=web,0,100,AI,88.6808,AI,0.1039,Human,0.1328,Human,0.0417,Human,0.2884,Human,20.5078,Human,21.1914,Human,0.1526,Human,0.1389,Human
+"I came away from this more bullish on Google, not less.
+
+“Gemini is cooked” is the provocative headline, but I’m not convinced model leadership is the most important variable in Google’s AI economics. Frontier model rankings can change within months. Reproducing Google’s infrastructure stack takes years and enormous capital.
+Google has TPUs, custom networking, data centers, storage, distributed systems, and GCP. If it can make GCP the place enterprises run Gemini, Anthropic, OpenAI, and open models, it can monetize AI demand regardless of which model sits at the top of the leaderboard.
+That becomes particularly interesting as inference grows. Training gets the headlines, but production inference turns model usage into a continuous infrastructure workload. Cost per request, utilization, networking, reliability, capacity, and serving efficiency all start affecting the economics.
+Gemini still matters. Google needs a strong first-party model to drive its own products, shape the stack, create TPU demand, and avoid dependence on external labs. But Gemini does not need to dominate the entire model market for Google to build a very large AI business.
+In fact, persistent competition at the model layer could strengthen the infrastructure thesis. If enterprises increasingly use several models rather than standardizing on one, the valuable position may be the platform that can serve all of them efficiently.
+The article frames a tension between Gemini struggling and GCP succeeding. I suspect those two outcomes are far less contradictory than they appear.",https://substack.com/@cioinsights/note/c-311644426?r=gb4sb&utm_source=notes-share-action&utm_medium=web,0,100,AI,96.9108,AI,99.4043,AI,0.3807,Human,5.4786,Human,68.75,AI,100.0,AI,99.6094,AI,95.3125,AI,99.6094,AI
+"Cost is the worst reason to run a model locally.
+
+OpenAI just cut GPT-5.6 Luna 80% three weeks after launch. Cloud inference will keep undercutting anything you self host, and that argument is close to over.
+The reason that survives is versioning. A hosted endpoint is a moving target. Same URL, different weights, and your evals drift for reasons that never show up in your git log. A local checkpoint is the one part of an AI system you can actually pin.
+Cheap API for the work you can afford to have silently change. Weights you keep for everything else.",https://substack.com/@sarkardipankar/note/c-305048235?r=gb4sb&utm_source=notes-share-action&utm_medium=web,1,100,AI,0.3064,Human,0.0622,Human,0.0569,Human,0.0126,Human,0.2716,Human,99.2188,AI,32.0312,Human,0.1984,Human,0.0561,Human

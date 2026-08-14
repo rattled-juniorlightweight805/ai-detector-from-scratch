@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "local-ai-detector"
+version = "0.1.0"
+description = "A local DistilBERT classifier for estimating the probability of AI-generated text"
+requires-python = "==3.12.*"
+dependencies = [
+  "huggingface-hub==1.26.0",
+  "numpy==2.5.1",
+  "pyyaml==6.0.3",
+  "scikit-learn==1.9.0",
+]
+
+[tool.uv]
+required-version = ">=0.11.2,<0.13"
+default-groups = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ai_detector"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[dependency-groups]
+transformer-inference = [
+    "peft @ git+https://github.com/huggingface/peft.git@5f55a6331b6a1620d8200ddb7c7c517dec722908",
+    "torch==2.13.0",
+    "transformers==5.14.1",
+]
+training = [
+    { include-group = "transformer-inference" },
+    "accelerate==1.14.0",
+    "datasets==5.0.1",
+    "evaluate==0.4.6",
+]
+notebooks = [
+    "ipywidgets==8.1.8",
+    "jupyterlab==4.6.2",
+    "matplotlib==3.11.1",
+]
+browser-ui = [
+    "fastapi>=0.141.1",
+    "uvicorn>=0.52.1",
+]
+dev = [
+    { include-group = "training" },
+    { include-group = "notebooks" },
+    { include-group = "browser-ui" },
+    "httpx>=0.28.1",
+    "pytest==9.1.1",
+]

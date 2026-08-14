@@ -1,0 +1,31 @@
+{
+  "dataset": "rasbt/human-vs-ai-50k",
+  "base_model": "answerdotai/ModernBERT-base",
+  "label_mapping": {
+    "human": 0,
+    "ai": 1
+  },
+  "max_length": 8192,
+  "native_context_length": 8192,
+  "attention_implementation": "flash_attention_2",
+  "model_dtype": "torch.bfloat16",
+  "per_device_train_batch_size": 2,
+  "gradient_accumulation_steps": 8,
+  "effective_train_batch_size": 16,
+  "decision_threshold": 0.5,
+  "calibration": "temperature scaling",
+  "temperature": 1.566228609277514,
+  "best_validation_accuracy": 0.9970501474926253,
+  "best_checkpoint": "checkpoints-modernbert/checkpoint-7605",
+  "trainable_parameters": 149606402,
+  "training_runtime_seconds": 5356.6184,
+  "random_state": 17,
+  "python_version": "3.12.3",
+  "package_versions": {
+    "datasets": "4.1.0",
+    "numpy": "2.5.1",
+    "scikit-learn": "1.7.1",
+    "torch": "2.13.0",
+    "transformers": "5.14.1"
+  }
+}

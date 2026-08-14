@@ -1,0 +1,49 @@
+# Generated model weights and training checkpoints
+/hf-upload/
+/models/
+weights/
+checkpoints*/
+*.safetensors
+*.bin
+*.ckpt
+*.joblib
+*.pt
+*.pth
+.ipynb_checkpoints/
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Generated dataset metadata and archives
+/data/meta.json
+/data/meta copy.json
+/data.zip
+
+# Generated dataset text files
+/data/**/*.txt
+
+# Local recovery artifacts and interrupted atomic writes
+/data/recovery/
+/data/.meta.json.*.tmp
+/data/.locks/
+/data/generation-claims.json
+/data/generation-failures.jsonl
+/data/ai-assisted-generation-claims.json
+/data/ai-assisted-generation-failures.jsonl
+
+# Local Hugging Face DatasetDict build
+/data/hf-dataset/
+
+# Generated GRPO prompt dataset
+/data/grpo-prompts/
+/scripts/18_reinforcement-learning/logs/
+/scripts/18_reinforcement-learning/analysis/test-cases-*/
+
+# Regenerable length-bias prediction caches
+/scripts/12_length-bias/outputs/*-test-predictions.csv
+
+# Built local browser UI
+/scripts/17_browser-ui/frontend/dist/

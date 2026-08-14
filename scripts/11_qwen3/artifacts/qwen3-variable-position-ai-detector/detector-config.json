@@ -1,0 +1,34 @@
+{
+  "dataset": "rasbt/human-vs-ai-50k",
+  "base_model": "Qwen/Qwen3-0.6B",
+  "label_mapping": {
+    "human": 0,
+    "ai": 1
+  },
+  "readout_position": "variable",
+  "attention_implementation": "flash_attention_2",
+  "model_dtype": "torch.bfloat16",
+  "readout_token": "<|im_end|>",
+  "pad_token": "<|endoftext|>",
+  "native_context_length": 32768,
+  "context_length": 1024,
+  "max_text_length": 1023,
+  "decision_threshold": 0.5,
+  "calibration": "temperature scaling",
+  "temperature": 1.4665638128271772,
+  "best_validation_accuracy": 0.9992133726647001,
+  "best_checkpoint": "checkpoints-qwen3-variable-position/checkpoint-5070",
+  "trainable_parameters": 596051968,
+  "per_device_train_batch_size": 16,
+  "gradient_accumulation_steps": 1,
+  "training_runtime_seconds": 8971.1186,
+  "random_state": 17,
+  "python_version": "3.12.3",
+  "package_versions": {
+    "datasets": "4.1.0",
+    "numpy": "2.5.1",
+    "scikit-learn": "1.7.1",
+    "torch": "2.13.0",
+    "transformers": "5.14.1"
+  }
+}

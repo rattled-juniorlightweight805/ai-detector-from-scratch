@@ -1,0 +1,42 @@
+{
+  "model_selector": "default",
+  "returned_versions": [
+    "3.3.2"
+  ],
+  "bulk_id": "blk_fc32cc252c3f4af588ab492a2f11b247",
+  "manifest_sha256": "8a2112b6fa7982171576ac3209322a2f49911e92e8c2d8f4a333c79998949925",
+  "seed": 20260804,
+  "count_per_class": 50,
+  "total_samples": 100,
+  "total_words": 37168,
+  "billable_units_if_scanned_alone": 107,
+  "estimated_cost_if_scanned_alone_usd": 4.28,
+  "source_bulk_job": {
+    "submitted_samples": 300,
+    "billable_units": 323,
+    "estimated_bulk_cost_usd": 12.92
+  },
+  "prediction_counts": {
+    "human": {
+      "Human": 50
+    },
+    "ai": {
+      "AI": 48,
+      "Human": 1,
+      "Mixed": 1
+    }
+  },
+  "binary_matrix_for_exact_ai_human_labels": {
+    "tp": 48,
+    "fp": 0,
+    "tn": 50,
+    "fn": 1,
+    "unresolved": [
+      {
+        "true_label": "ai",
+        "prediction": "Mixed",
+        "count": 1
+      }
+    ]
+  }
+}
